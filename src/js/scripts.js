@@ -127,9 +127,9 @@ function enviaPedido() {
     precoBebida, precoSobremesa, precoTotal } = fechandoPedido();
 
   const mensagemDoPedido = `Olá, gostaria de fazer o pedido: \n
-    - Bebida Alcoolica: ${nomeBebidaAlcoolica} - ${precoBebidaAlcoolica} \n
-    - Bebida: ${nomeBebida} - ${precoBebida} \n
-    - Sobremesa: ${nomeSobremesa} - ${precoSobremesa} \n
+    - Bebida Alcoolica: ${nomeBebidaAlcoolica} - ${precoBebidaAlcoolica.toFixed(2)} \n
+    - Bebida: ${nomeBebida} - ${precoBebida.toFixed(2)} \n
+    - Sobremesa: ${nomeSobremesa} - ${precoSobremesa.toFixed(2)} \n
     Total: R$ ${precoTotal}`;
 
   const linkWhatsApp = `https://wa.me/5511933316252?text=${encodeURIComponent(
