@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/icon" href="src/images/burguer-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="src/css/reset.css" />
+  <link rel="stylesheet" href="src/css/styles.css" />
+  <title>Delivery Online</title>
+</head>
+
+<body>
+  <header>
+    <div class="titulos">
+      <div class="menu-superior-titulo">Delivery Online</div>
+      <div class="menu-superior-sub-titulo">
+        <h3>Trabalhamos com combos, escolha 3.</h3>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="grupo-de-itens">
+      <div class="titulo-item-selecionado">Escolha uma bebida</div>
+      <div class="itens-rolagem pratos">
+        <div class="item-selecionado" onclick="selecionarPrato(this)">
+          <img src="src/images/pratos/omelete.jpg" alt="foto de uma omelete" />
+          <div class="nome">OMELETE</div>
+          <div class="descricao-item">
+            Ovos, mussarela, bacon, tomate e cereja.
+          </div>
+          <div class="valor">R$ 15.90</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarPrato(this)">
+          <img src="src/images/pratos/tapioca2.jpg" alt="foto de uma tapioca" />
+          <div class="nome">TAPIOCA CARNE SECA</div>
+          <div class="descricao-item">
+            Carne seca desfiada, queijo mussarela.
+          </div>
+          <div class="valor">R$ 17.90</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarPrato(this)">
+          <img src="src/images/pratos/Salada-Caesar.jpg" alt="foto de uma salada ceaser" />
+          <div class="nome">SALADA CEASER</div>
+          <div class="descricao-item">
+            Alface, frango grelhado, aliche, parmesão, molho ceaser.
+          </div>
+          <div class="valor">R$ 14.90</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarPrato(this)">
+          <img src="src/images/pratos/pao-de-queijo.jpg" alt="foto de um recipiente com pães de queijo" />
+          <div class="nome">PÃO DE QUEIJO</div>
+          <div class="descricao-item">
+            Pão de queijo trad. C/10.
+          </div>
+          <div class="valor">R$ 8.90</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarPrato(this)">
+          <img src="src/images/pratos/panqueca-frango.jpg" alt="foto de uma panqueca" />
+          <div class="nome">WRAP DE FRANGO</div>
+          <div class="descricao-item">
+            Frango, molho tomate, mussarela, cebola.
+          </div>
+          <div class="valor">R$ 13.90</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarPrato(this)">
+          <img src="src/images/pratos/salpicao.jpg" alt="foto de um belíssimo salpicão" />
+          <div class="nome">SALPICÃO</div>
+          <div class="descricao-item">Salpicão no pote 350G.</div>
+          <div class="valor">R$ 16.90</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="grupo-de-itens">
+      <div class="titulo-item-selecionado">Que tal um refrigerante?</div>
+      <div class="itens-rolagem bebidas">
+        <div class="item-selecionado" onclick="selecionarBebidas(this)">
+          <img src="src/images/bebidas/coca.webp" alt="foto de um refrigerante de cola" />
+          <div class="nome">COCA COLA</div>
+          <div class="descricao-item">REFRIG. 350ML.</div>
+          <div class="valor">R$ 3.50</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarBebidas(this)">
+          <img src="src/images/bebidas/guarana-antarctica.jpeg" alt="foto de um refrigerante guaraná" />
+          <div class="nome">GUARANÁ ANTÁRTICA</div>
+          <div class="descricao-item">REFRIG. 350ML.</div>
+          <div class="valor">R$ 3.50</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarBebidas(this)">
+          <img src="src/images/bebidas/pepsi.png" alt="foto de um refrigerante de cola" />
+          <div class="nome">PEPSI</div>
+          <div class="descricao-item">REFRIG. 350ML.</div>
+          <div class="valor">R$ 3.50</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarBebidas(this)">
+          <img src="src/images/bebidas/coca-cola-2l.jpeg" alt="foto de um refrigerante de cola" />
+          <div class="nome">COCA COLA</div>
+          <div class="descricao-item">REFRIG. 2L.</div>
+          <div class="valor">R$ 8.99</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarBebidas(this)">
+          <img src="src/images/bebidas/guarana-antarctica-2l.jpeg" alt="foto de um refrigerante guaraná " />
+          <div class="nome">GUARANÁ ANTÁRTICA</div>
+          <div class="descricao-item">REFRIG. 2L.</div>
+          <div class="valor">8.99</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick="selecionarBebidas(this)">
+          <img src="src/images/bebidas/pepsi-2l.jpeg" alt="foto de um refrigerante de cola" />
+          <div class="nome">PEPSI</div>
+          <div class="descricao-item">REFRIG. 2L.</div>
+          <div class="valor">R$ 8.99</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="grupo-de-itens">
+      <div class="titulo-item-selecionado">Escolha uma sobremesa</div>
+      <div class="itens-rolagem sobremesas">
+        <div class="item-selecionado" onclick=" selecionarSobremesas(this)">
+          <img src="src/images/sobremesas/brigadeiro.jpg" alt="foto de três brigadeiros" />
+          <div class="nome">BRIGADEIRO</div>
+          <div class="descricao-item">
+            Brigadeiro trad. granulado.
+          </div>
+          <div class="valor">R$ 2.50</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick=" selecionarSobremesas(this)">
+          <img src="src/images/sobremesas/bolo-no-pote-floresta-negra.jpg"
+            alt="foto de um bolo no pote com tres camadas" />
+          <div class="nome">BOLO FLORESTA NEGRA</div>
+          <div class="descricao-item">Bolo no pote</div>
+          <div class="valor">R$ 6.99</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick=" selecionarSobremesas(this)">
+          <img src="src/images/sobremesas/bolo-pote.jpg" alt="foto de uma bolo no pote de chocolate" />
+          <div class="nome">BOLO CHOCOLATE</div>
+          <div class="descricao-item">
+            Bolo no Pote.
+          </div>
+          <div class="valor">R$ 6.99</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick=" selecionarSobremesas(this)">
+          <img src="src/images/sobremesas/salada-de-fruta.jpg" alt="foto de salada de frutas" />
+          <div class="nome">SALADA DE FRUTAS</div>
+          <div class="descricao-item">
+            Kiwi, morango, manga e laranja.
+          </div>
+          <div class="valor">R$ 3,50</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick=" selecionarSobremesas(this)">
+          <img src="src/images/sobremesas/pudim.jpg" alt="foto de um pudim" />
+          <div class="nome">PUDIM</div>
+          <div class="descricao-item">Pudim de leite cond.</div>
+          <div class="valor">R$ 5.99</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="item-selecionado" onclick=" selecionarSobremesas(this)">
+          <img src="src/images/sobremesas/pave_doce_leite.jpg" alt="foto de um pavê de doce de leite" />
+          <div class="nome">PAVÊ DOCE DE LEITE</div>
+          <div class="descricao-item">Pavê no pote</div>
+          <div class="valor">R$ 6.99</div>
+          <ion-icon class="escondido" name="checkmark-circle"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="menu-inferior">
+      <div class="barra-selecionar">
+        <p>Selecione 3 itens primeiro</p>
+      </div>
+    </div>
+    <div class="finalizar escondido">
+      <div class="barra-selecionar" onclick="confirmaPedido()">
+        <p>Confirmar pedido</p>
+      </div>
+    </div>
+  </footer>
+  <div class="tela-de-confirmacao nenhuma-selecao">
+    <div class="dados-do-pedido">
+      <h4 class="titulo-confirmacao">Confirme seu pedido</h4>
+      <ul class="itens-confirmacao"></ul>
+      <div class="botoes">
+        <div class="botao-confirmacao confirmar" onclick="enviaPedido()">
+          Finalizar pedido
+        </div>
+        <div class="botao-confirmacao cancelar" onclick="cancelaPedido()">
+          Cancelar
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="src/js/scripts.js"></script>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
+</html>
