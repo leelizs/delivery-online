@@ -126,7 +126,7 @@ function enviaPedido() {
   const { nomeBebidaAlcoolica, nomeBebida, nomeSobremesa, precoTotal } = fechandoPedido();
 
   const mensagemDoPedido = `Olá, gostaria de fazer o pedido: \n
-    - Prato: ${nomeBebidaAlcoolica} \n
+    - Bebida Alcoolica: ${nomeBebidaAlcoolica} \n
     - Bebida: ${nomeBebida} \n
     - Sobremesa: ${nomeSobremesa} \n
     Total: R$ ${precoTotal}`;
