@@ -123,12 +123,13 @@ function monstraItensDoPedido() {
 }
 
 function enviaPedido() {
-  const { nomeBebidaAlcoolica, nomeBebida, nomeSobremesa, precoTotal } = fechandoPedido();
+  const { nomeBebidaAlcoolica, nomeBebida, nomeSobremesa, precoBebidaAlcoolica,
+    precoBebida, precoSobremesa, precoTotal } = fechandoPedido();
 
   const mensagemDoPedido = `Olá, gostaria de fazer o pedido: \n
-    - Bebida Alcoolica: ${nomeBebidaAlcoolica} \n
-    - Bebida: ${nomeBebida} \n
-    - Sobremesa: ${nomeSobremesa} \n
+    - Bebida Alcoolica: ${nomeBebidaAlcoolica} - ${precoBebidaAlcoolica} \n
+    - Bebida: ${nomeBebida} - ${precoBebida} \n
+    - Sobremesa: ${nomeSobremesa} - ${precoSobremesa} \n
     Total: R$ ${precoTotal}`;
 
   const linkWhatsApp = `https://wa.me/5511933316252?text=${encodeURIComponent(
