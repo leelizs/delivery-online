@@ -1,11 +1,11 @@
-function selecionarPrato(prato) {
-  let pratoSelecionado = document.querySelector(".pratos .escolhido");
+function selecionarBebidasAlcoolicas(bebidaAlcoolica) {
+  let bebidaAlcoolicaSelecionada = document.querySelector(".pratos .escolhido");
 
-  if (!!pratoSelecionado) {
-    pratoSelecionado.classList.remove("escolhido");
+  if (!!bebidaAlcoolicaSelecionada) {
+    bebidaAlcoolicaSelecionada.classList.remove("escolhido");
   }
 
-  prato.classList.add("escolhido");
+  bebidaAlcoolica.classList.add("escolhido");
   verificarSelecao();
 }
 
@@ -54,26 +54,26 @@ function formatarPreco(valor) {
 
 function fechandoPedido() {
   let pedido = {};
-  let pratoSelecionado = document.querySelector(".pratos .escolhido");
+  let bebidaAlcoolicaSelecionada = document.querySelector(".pratos .escolhido");
   let bebidaSelecionada = document.querySelector(".bebidas .escolhido");
   let sobremesaSelecionada = document.querySelector(".sobremesas .escolhido");
 
-  const nomePrato = pratoSelecionado.querySelector(".nome").innerHTML;
+  const nomeBebidaAlcoolica = bebidaAlcoolicaSelecionada.querySelector(".nome").innerHTML;
   const nomeBebida = bebidaSelecionada.querySelector(".nome").innerHTML;
   const nomeSobremesa =
     sobremesaSelecionada.querySelector(".nome").innerHTML;
 
-  const precoPrato = formatarPreco(pratoSelecionado);
+  const precoBebidaAlcoolica = formatarPreco(bebidaAlcoolicaSelecionada);
   const precoBebida = formatarPreco(bebidaSelecionada);
   const precoSobremesa = formatarPreco(sobremesaSelecionada);
 
-  const precoTotal = (precoPrato + precoBebida + precoSobremesa).toFixed(2);
+  const precoTotal = (precoBebidaAlcoolica + precoBebida + precoSobremesa).toFixed(2);
 
   pedido = {
-    nomePrato,
+    nomeBebidaAlcoolica,
     nomeBebida,
     nomeSobremesa,
-    precoPrato,
+    precoBebidaAlcoolica,
     precoBebida,
     precoSobremesa,
     precoTotal,
@@ -92,10 +92,10 @@ function confirmaPedido() {
 
 function monstraItensDoPedido() {
   const {
-    nomePrato,
+    nomeBebidaAlcoolica,
     nomeBebida,
     nomeSobremesa,
-    precoPrato,
+    precoBebidaAlcoolica,
     precoBebida,
     precoSobremesa,
     precoTotal,
@@ -104,8 +104,8 @@ function monstraItensDoPedido() {
   const itensDoPedido = document.querySelector(".itens-confirmacao");
   itensDoPedido.innerHTML = `
     <li class="item">
-      <h6 class="nome">${nomePrato}</h6>
-      <h6 class="preco">${precoPrato.toFixed(2)}</h6>
+      <h6 class="nome">${nomeBebidaAlcoolica}</h6>
+      <h6 class="preco">${precoBebidaAlcoolica.toFixed(2)}</h6>
     </li>
     <li class="item">
     <h6 class="nome">${nomeBebida}</h6>
@@ -123,10 +123,10 @@ function monstraItensDoPedido() {
 }
 
 function enviaPedido() {
-  const { nomePrato, nomeBebida, nomeSobremesa, precoTotal } = fechandoPedido();
+  const { nomeBebidaAlcoolica, nomeBebida, nomeSobremesa, precoTotal } = fechandoPedido();
 
   const mensagemDoPedido = `Olá, gostaria de fazer o pedido: \n
-    - Prato: ${nomePrato} \n
+    - Prato: ${nomeBebidaAlcoolica} \n
     - Bebida: ${nomeBebida} \n
     - Sobremesa: ${nomeSobremesa} \n
     Total: R$ ${precoTotal}`;
